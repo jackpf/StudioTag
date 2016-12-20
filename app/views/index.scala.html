@@ -1,15 +1,7 @@
 @()
-@main("Login") {
-    <div data-ng-app="">
-        <h1>Login Form</h1>
-        <form role="form">
-            <div class="form-group">
-                <label for="username">Username</label>
-                <input class="form-control" data-ng-model="username" autofocus>
-            </div>
-        </form>
-        <div class="alert alert-danger well">
-            {{ username }}
-        </div>
+@main("Index") {
+    <div ng-controller="Index">
+        Hi :D<br />
+        <a href="#logout" ng-click="LoginService.logout('@routes.LoginController.logoutProcess()', '@routes.IndexController.index()')">Logout</a>
     </div>
 }
